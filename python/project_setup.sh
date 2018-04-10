@@ -37,12 +37,37 @@ then
     cd src
     echo -e "\033[4m\033[1m\033[34m Create Project"
     django-admin startproject $project_name .
+
+    cd $project_name
+    mkdir settings
+    echo "copy settings file"
+    cp settings.py settings 
+
+    echo "Rename setting to old_setting"
+    mv settings.py old_settings.py 
+
+    echo "Create Prod and Dev"
+    cd settings
+    touch __init__.py prod.py dev.py && mv settings.py base.py
+    echo "content of __init__"
+    echo "
+        from .base import *
+
+        try:
+            from .local import *
+        except:
+            pass" > __init__.py
+
+    echo "Rename setting to base.py"
+    mv setting.py base.py
+    echo "Change setting for run this project BASE DIR"
+    sed -i 's/(os.path.abspath(__file__)))/(os.path.dirname(os.path.abspath(__file__))))/g' base.py
+    cd ..
+    cd ..
     python manage.py makemigration 
     python manage.py migrate
     python manage.py runserver
 
 fi
 
-
-sed -i 's/original/new/g' file.txt
 
