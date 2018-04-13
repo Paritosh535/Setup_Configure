@@ -10,6 +10,8 @@ python manage.py startapp $app_name
 
 # touch $app_name
 # python manage.py startapp $app_name
+
+echo -e " \033[1m\033[32mCreating API Dir"
 cd $app_name && mkdir api && cd api && touch serializer.py urls.py views.py
 
 # echo "Enter Model Name"
