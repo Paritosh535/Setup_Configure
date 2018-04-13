@@ -10,7 +10,7 @@ python manage.py startapp $app_name
 
 # touch $app_name
 # python manage.py startapp $app_name
-# cd $app_name && mkdir api && cd api && touch serializer.py urls.py views.py
+cd $app_name && mkdir api && cd api && touch serializer.py urls.py views.py
 
 # echo "Enter Model Name"
 # read model_name
