@@ -9,6 +9,7 @@ read app_name
 python manage.py startapp $app_name 
 
 # touch $app_name
+echo -e " \033[1m\033[32mCreating Apps"
 # python manage.py startapp $app_name
 
 echo -e " \033[1m\033[32mCreating API Dir"
