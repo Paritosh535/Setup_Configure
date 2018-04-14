@@ -9,5 +9,5 @@ echo "install Mongo"
 sudo apt-get install -y mongodb-org
 echo "start for every reboot"
 sudo systemctl start mongod
-
+echo "check.."
 sudo systemctl status mongod
