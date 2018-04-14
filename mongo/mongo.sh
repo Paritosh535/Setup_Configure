@@ -5,9 +5,9 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongod
 echo "update system"
 sudo apt-get update
 
-echo "install Mongod
+echo "install Mongo"
 sudo apt-get install -y mongodb-org
-
+echo "start for every reboot"
 sudo systemctl start mongod
 
 sudo systemctl status mongod
