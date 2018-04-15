@@ -14,4 +14,5 @@ echo -e " \033[1m\033[32mCreating Apps"
 
 echo -e " \033[1m\033[32mCreating API Dir"
 cd $app_name && mkdir api && cd api && touch serializer.py urls.py views.py
+echo "ready to go.."
 
