@@ -1,20 +1,21 @@
-#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-
+echo "Setup NVM Node Version Manager."
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+echo "Find version of NVM."
 nvm --version
 echo -e "1=> latest \n2=> lts"
 read option
 if [ $option -eq 1 ]
 then
-    echo "if"
-#nvm install node
-#nvm use node
+    echo "Installation of node Latest Version.."
+    nvm install node
+    nvm use node
 elif [ $option -eq 2 ]
 then
-    echo "elseif"
-#nvm install --lts
-#nvm use --lts
+    echo "Installation of node Latest LST Version.. "
+    nvm install --lts
+    nvm use --lts
 else
-    echo "else"
+    echo "Invalid Key Press.."
 fi
 
 #Install the latest version with nvm install node
