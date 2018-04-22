@@ -80,7 +80,7 @@ docker image build -t customer . (-t is tag (.) all files)
 IMP for push image in hub
 docker image build -t customer .
 docker image tag customer:lastes paritosh535/cutomer:lates|1.0
-docker image push <img name>(paritosh535/cutomer:lates)
+docker image push <img name> (paritosh535/cutomer:lates)
 
 04 Container Lifetime  Persistent Data Volumes Volumes Volumes
 41
@@ -101,6 +101,7 @@ docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html ng
 05 Making It Easier with Docker Compose The Multi-Container Tool
 
 48(Structure)
+docker-compose -f docker-compose-prod.yml up -d(run our own file)
 Docker-compose up
 docker-compose up -d(-detach run background)
 docker-compose down(stop all container and remove cont/vol/net)
