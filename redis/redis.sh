@@ -4,5 +4,7 @@ cd redis-4.0.9
 make
 make test
 sudo make test install
+echo "start"
+redis-server
 
 
