@@ -102,6 +102,18 @@ try:
 except:
     pass" > settings/__init__.py
 
+
+echo "Rest And Apps Intigrations "
+sed -i 's/'\'django.contrib.admin\','/#Apps\n\n    #Install Other Framework \n    '\'rest_framework\','\n\n    #Django_Dep\n    '\'django.contrib.admin\','/g' settings/base.py
+echo "Rest Framework Permission Settings"
+echo "REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}">> settings/base.py
+
 echo "Back To parent Dir"
 cd ..
 
