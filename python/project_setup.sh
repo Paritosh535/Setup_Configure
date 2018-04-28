@@ -22,7 +22,7 @@ echo -e "\033[1m\033[32mInstall Package"
 echo -e "
 \033[1m  Basic 	 			Standard				Advance
 \033[0m\033[36m1) Django 	 			1) Django		
-\033[0m\033[36m1) Rest Framework
+\033[0m\033[36m1) Rest Framework        2)Rest Framework
 			
 
 	"
@@ -30,18 +30,26 @@ echo -e "\033[1m\033[33m 1 => Basic(Empty \n 2 => Standard \n 3 => Advance"
 read option
 
 echo "============================Django===================================="
-if [ $option="1" ]
+if [ "$option" -eq "1" ]
 then
-echo -e "\033[4m\033[1m\033[32m Installation Django in your Env.."
+    echo -e "\033[4m\033[1m\033[32m Empty"
+    
+elif [ "$option" -eq "2" ]
+then
+echo "Installation of Envirenment"
 pip install django
+pip install djangorestframework
+pip install markdown       # Markdown support for the browsable API.
+pip install django-filter  # Filtering support
 
+echo -e "\033[4m\033[1m\033[34mCreate Django Project..."
 cd src
-echo -e "\033[4m\033[1m\033[34m Create Project"
 django-admin startproject $project_name .
 
 cd $project_name
 mkdir settings
 echo "==================Create Base Setting for This Projects================"
+
 cp settings.py settings/base.py 
 echo "Change setting for run this project BASE DIR"
 sed -i 's/(os.path.abspath(__file__)))/(os.path.dirname(os.path.abspath(__file__))))/g' settings/base.py
@@ -103,5 +111,7 @@ python manage.py migrate
 python manage.py runserver 
 
 fi
+
+
 
 
