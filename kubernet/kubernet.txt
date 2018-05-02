@@ -1,0 +1,10 @@
+
+start minikub
+$minikube start
+deployment in your local minikub
+$kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
+expose this deployement to external network
+$kubectl expose deployment hello-minikube --type=NodePort
+
+
+
