@@ -6,13 +6,14 @@ $kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --po
 expose this deployement to external network
 $kubectl expose deployment hello-minikube --type=NodePort
 list the PODS of deployment
-kubectl get pod
+$kubectl get pod
 access the sample service
 $crul$(minikube service hello-minikube -url)
 Delete the deployment
 $kubectl delete deployment hello-minikube
 stop
-minikube stop
+$minikube stop
+
 
 
 
