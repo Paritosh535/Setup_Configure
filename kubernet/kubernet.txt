@@ -1,4 +1,4 @@
-
+COMMAND
 start minikub
 $minikube start
 deployment in your local minikub
