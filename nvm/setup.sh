@@ -18,6 +18,7 @@ else
     echo "Invalid Key Press.."
 fi
 nvm install node
+nvm alias default <version>
 #Install the latest version with nvm install node
 #Use the latest version with nvm use node
 #Install the latest LTS version with nvm install --lts
