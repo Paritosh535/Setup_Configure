@@ -33,6 +33,6 @@ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
 
 echo "Docker compose"
 
-sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 echo "Need in AWS instance"
 sudo chmod +x /usr/local/bin/docker-compose
